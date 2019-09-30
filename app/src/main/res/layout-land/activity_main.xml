@@ -1,35 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="4"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/newGameBtn"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="New Game" />
+    <LinearLayout
+        android:id="@+id/alphabet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/newGameBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="New Game" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/hangImg"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         app:srcCompat="@android:drawable/alert_light_frame" />
-
-    <LinearLayout
-        android:id="@+id/alphabet"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/wordAndHint"
@@ -43,10 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:textSize="40dp"
-            />
+            android:textSize="40dp" />
 
     </LinearLayout>
 
 </LinearLayout>
-
